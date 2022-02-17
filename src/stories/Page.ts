@@ -4,19 +4,19 @@ import './page.css';
 
 export interface PageProps {
   user?: {};
-  onLogin: () => void;
-  onLogout: () => void;
-  onCreateAccount: () => void;
+  onLogin?: () => void;
+  onLogout?: () => void;
+  onCreateAccount?: () => void;
 }
 
 export const Page = ({ user, onLogin, onLogout, onCreateAccount }: PageProps) => html`
   <article>
     ${Header({
-      user,
-      onLogin,
-      onLogout,
-      onCreateAccount,
-    })}
+  user,
+  onLogin,
+  onLogout,
+  onCreateAccount,
+})}
 
     <section>
       <h2>Pages in Storybook</h2>
