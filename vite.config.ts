@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   build: {
     lib: {
+      name: 'scl',
       entry: 'src/index.ts',
       formats: ['es']
     },
