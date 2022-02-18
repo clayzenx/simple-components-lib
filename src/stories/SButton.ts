@@ -2,12 +2,15 @@ import { html } from 'lit-html';
 import "../s-button"
 
 export interface SButtonProps {
-  label?: string
+  type?: string
+  slot?: string
 }
 
-export const SButton = ({ label = 'Button' }: SButtonProps) => {
+export const SButton = ({ slot = 'Button', type = 'button' }: SButtonProps) => {
 
   return html`
-    <s-button>${label}</s-button>
+    <s-button type=${type}>
+      ${slot}
+    </s-button>
   `;
 };

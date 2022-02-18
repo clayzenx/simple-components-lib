@@ -6,25 +6,29 @@
   <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + Lit App</title>
-  <script type="module" src="/src/my-element.ts"></script>
+
   <script type="module" src="/src/s-button.ts"></script>
+  <script type="module" src="/src/s-tabs.ts"></script>
+
   <style>
     body {
       background-color: white;
+    }
+
+    s-button[active] {
+      color: red;
     }
   </style>
 </head>
 
 <body>
-  <my-element>
-    <p>This is child content</p>
-    <s-button class="asd" onClick="console.log('asd')">
-      <span style="display: flex; column-gap: 20px">
-        <p>zxc</p>
-        <p>asd</p>
-      </span>
-    </s-button>
-  </my-element>
+  <s-tabs>
+    <s-button slot="tab" id="/home" active type="link">Home</s-button>
+    <s-button slot="tab" id="/catalog" type="link">Catalog</s-button>
+    <s-button slot="tab" id="/about" type="link">About</s-button>
+
+    <div slot="view">Home content</div>
+  </s-tabs>
 </body>
 
 </html>
