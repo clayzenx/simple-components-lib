@@ -17,9 +17,17 @@ export class SButton extends LitElement {
   @property({ type: String })
   type: SButtonType = "button"
 
+
+  toggleActive() {
+    this.toggleAttribute('enabled')
+  }
+
   render() {
     return html`
-      <div class=${this.type}>
+      <div 
+        class=${this.type} 
+        @click=${this.type === "toggle" ? this.toggleActive : null
+      }>
         <slot></slot>
       </div>
     `

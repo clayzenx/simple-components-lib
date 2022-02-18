@@ -6,7 +6,7 @@ export default {
   argTypes: {
     type: {
       control: { type: 'select' },
-      options: ['button', 'link'],
+      options: ['button', 'link', 'toggle'],
     },
 
   } as Meta
@@ -21,8 +21,14 @@ SButton.args = {
 };
 export const SLink = Template.bind({});
 SLink.args = {
-  slot: 's-button',
+  slot: 's-button[type="link"]',
   type: 'link'
 };
+export const SToggle = Template.bind({});
+SToggle.args = {
+  slot: 's-button[type="toggle"]',
+  type: 'toggle'
+};
+
 
 
