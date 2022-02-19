@@ -9,28 +9,31 @@
 
   <script type="module" src="/src/s-button.ts"></script>
   <script type="module" src="/src/s-tabs.ts"></script>
+  <script type="module" src="/src/s-details.ts"></script>
 
   <style>
     body {
       background-color: white;
     }
 
-    s-button[active] {
-      color: red;
+    [active],
+    [open] {
+      color: green
     }
   </style>
 </head>
 
 <body>
   <s-tabs>
-    <s-button slot="tab" id="/home" active type="link">Home</s-button>
-    <s-button slot="tab" id="/catalog" type="link">Catalog</s-button>
-    <s-button slot="tab" id="/about" type="link">About</s-button>
-
-    <div slot="view">Home content</div>
+    <s-button slot="tab" id="/home" type="link" class="tab" active>Home</s-button>
+    <s-button slot="tab" id="/catalog" type="link" class="tab">Catalog</s-button>
+    <s-button slot="tab" id="/about" type="link" class="tab">About</s-button>
   </s-tabs>
 
-  <s-button type="toggle">on</s-button>
+  <s-details>
+    <s-button slot="summary" type="link">Help</s-button>
+    <span slot="content">Need help</span>
+  </s-details>
 
 </body>
 

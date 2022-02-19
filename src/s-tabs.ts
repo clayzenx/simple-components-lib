@@ -4,11 +4,7 @@ import { customElement } from 'lit/decorators.js'
 @customElement('s-tabs')
 export class STabs extends LitElement {
   static styles = css`
-    :host {
-      display: flex;
-      flex-direction: column;
-    }
-    nav { display: flex; }
+    nav {display:flex; flex-direction: column}
   `
 
   private _changeActive(e: Event) {
@@ -25,14 +21,9 @@ export class STabs extends LitElement {
 
   render() {
     return html`
-      <div>
-        <nav>
-          <slot name="tab" @click="${this._changeActive}"></slot>
-        </nav>
-        <section>
-          <slot name="view"></slot>
-        </section>
-      </div>
+      <nav>
+         <slot name="tab" @click="${this._changeActive}"></slot>
+      </nav>
     `
   }
 }
