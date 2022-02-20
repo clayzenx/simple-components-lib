@@ -1,4 +1,5 @@
 import "./s-button"
 import "./s-nav"
-import "./s-details.ts"
+import "./s-details"
+import "./s-accordion"
 

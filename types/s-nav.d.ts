@@ -1,12 +1,12 @@
 import { LitElement } from 'lit';
-export declare class SButton extends LitElement {
+export declare class SNav extends LitElement {
     static styles: import("lit").CSSResult;
-    type: SButtonType;
-    toggleActive(): void;
+    direction: string;
+    private _changeActive;
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        's-button': SButton;
+        's-nav': SNav;
     }
 }

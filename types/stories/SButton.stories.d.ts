@@ -7,3 +7,4 @@ declare const _default: {
 export default _default;
 export declare const SButton: Story<Partial<SButtonProps>>;
 export declare const SLink: Story<Partial<SButtonProps>>;
+export declare const SToggle: Story<Partial<SButtonProps>>;
