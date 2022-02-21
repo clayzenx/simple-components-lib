@@ -145,7 +145,6 @@ let SAccordion = class extends LitElement {
     var _a, _b;
     const target = e.target.closest("[slot='accordion-item']");
     const items = (_b = (_a = this.shadowRoot) == null ? void 0 : _a.querySelector("slot[name='accordion-item']")) == null ? void 0 : _b.assignedElements();
-    console.log(target, items);
     if (target && items.length)
       items.forEach((item) => item.id === target.id ? item.setAttribute("open", "") : item.removeAttribute("open"));
   }

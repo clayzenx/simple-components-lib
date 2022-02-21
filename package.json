@@ -1,10 +1,9 @@
 {
-  "name": "simple-components-lib",
-  "private": true,
-  "version": "0.0.0",
-  "main": "dist/my-element.es.js",
+  "name": "wc-simple-components-lib",
+  "version": "0.0.5",
+  "main": "./dist/wc-simple-components-lib.es.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/wc-simple-components-lib.es.js"
   },
   "types": "types/my-element.d.ts",
   "files": [
@@ -31,5 +30,14 @@
     "vite": "^2.8.0"
   },
   "author": "Vlad <clay.zenx@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clayzenx/simple-components-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/clayzenx/simple-components-lib/issues"
+  },
+  "homepage": "https://github.com/clayzenx/simple-components-lib#readme",
+  "description": ""
 }

@@ -9,7 +9,6 @@ export class SAccordion extends LitElement {
   private _changeOpen(e: Event) {
     const target = (e.target as HTMLElement).closest("[slot='accordion-item']");
     const items = (this.shadowRoot?.querySelector("slot[name='accordion-item']") as HTMLSlotElement)?.assignedElements()
-    console.log(target, items)
 
     if (target && items.length)
       items.forEach(item =>
