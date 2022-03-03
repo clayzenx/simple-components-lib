@@ -1,4 +1,5 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,7 +10,10 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: /^lit/
+      external: /^lit/,
+      plugins: [nodeResolve({
+        exportConditions: ['production']
+      })]
     }
   }
 })
