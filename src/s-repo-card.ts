@@ -68,7 +68,6 @@ export class SRepoCard extends LitElement {
 
   async connectedCallback() {
     super.connectedCallback();
-    console.log('asd')
     fetch(`https://api.github.com/repos/${this.slug}`).then(r => r.json())
       .then(({
         name,
@@ -95,7 +94,6 @@ export class SRepoCard extends LitElement {
       });
     let colors: Promise<Colors> = await fetch("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json").then(r => r.json())
     this.colors = await colors
-    console.log(this.colors)
   }
 
   lastUpdateFormat() {

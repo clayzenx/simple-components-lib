@@ -9,8 +9,9 @@ const Template: Story<Partial<SDetailsProps>> = (args) => Details(args);
 
 export const SDetails = Template.bind({});
 SDetails.args = {
-  "summary": "slot[summary]",
-  "content": "slot[content]",
+  "summary": "Title",
+  "content": "Text content",
+  "isOpen": true
 };
 
 

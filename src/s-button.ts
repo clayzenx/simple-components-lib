@@ -8,10 +8,6 @@ export class SButton extends LitElement {
       display: inline-block;
       cursor: pointer;
     }
-    .button {
-      border: 1px solid black;
-      padding: 10px 15px;
-    }
   `
 
   @property({ type: String })

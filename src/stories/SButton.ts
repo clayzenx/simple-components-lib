@@ -6,9 +6,24 @@ export interface SButtonProps {
   slot?: string
 }
 
-export const SButton = ({ slot = 'Button', type = 'button' }: SButtonProps) => {
+export const SButton = ({ slot, type }: SButtonProps) => {
 
   return html`
+    <style>
+      [type="link"] {
+        color: lightblue;
+      }
+      [type="button"] {
+        border: 1px solid grey;
+        padding: 5px;
+      }
+      [type="toggle"]{
+        color: red;
+      }
+      [type="toggle"][enabled] {
+        color: green
+      }
+    </style>
     <s-button type=${type}>
       ${slot}
     </s-button>

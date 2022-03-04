@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
+
 @customElement('s-accordion')
 export class SAccordion extends LitElement {
   static styles = css`

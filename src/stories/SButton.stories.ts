@@ -16,17 +16,17 @@ const Template: Story<Partial<SButtonProps>> = (args) => Button(args);
 
 export const SButton = Template.bind({});
 SButton.args = {
-  slot: 's-button',
+  slot: 'button',
   type: 'button'
 };
 export const SLink = Template.bind({});
 SLink.args = {
-  slot: 's-button[type="link"]',
+  slot: 'link',
   type: 'link'
 };
 export const SToggle = Template.bind({});
 SToggle.args = {
-  slot: 's-button[type="toggle"]',
+  slot: 'toggle',
   type: 'toggle'
 };
 

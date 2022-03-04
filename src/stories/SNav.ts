@@ -3,16 +3,48 @@ import "../s-nav";
 import "../s-button";
 
 export interface SNavProps {
-  navItem?: string
-  direction?: string
-  id?: number
+  direction?: 'row' | 'column'
 }
 
-export const SNav = ({ navItem = 'nav1', id = 1, direction = 'column' }: SNavProps) => {
+export const SNav = ({ direction }: SNavProps) => {
 
-  return html`
-    <s-nav direction=${direction}>
-      <s-button slot="nav-item" id="${id}" type="link" class="tab" active>${navItem}</s-button>
+  return direction === "row" ? html`
+    <style>
+      [active] {
+        color: green
+      }
+      s-button {
+        padding: 5px;
+        cursor: pointer;
+      }
+      s-button[active] {
+        border-bottom: 2px solid green
+      }
+    </style>
+    <s-nav direction="row">
+      <s-button slot="nav-item" id="/home" type="link" class="tab" active>Home</s-button>
+      <s-button slot="nav-item" id="/catalog" type="link" class="tab">Catalog</s-button>
+      <s-button slot="nav-item" id="/about" type="link" class="tab">About</s-button>
     </s-nav>
-  `;
+  `:
+    html`
+    <style>
+      [active] {
+        color: green
+      }
+      s-button {
+        padding: 5px;
+        cursor: pointer;
+      }
+      s-button[active] {
+        border-bottom: 2px solid green
+      }
+
+    </style>
+    <s-nav direction="column">
+      <s-button slot="nav-item" id="/home" type="link" class="tab" active>Home</s-button>
+      <s-button slot="nav-item" id="/catalog" type="link" class="tab">Catalog</s-button>
+      <s-button slot="nav-item" id="/about" type="link" class="tab">About</s-button>
+    </s-nav>
+  `
 };
