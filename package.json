@@ -1,6 +1,6 @@
 {
   "name": "wc-simple-components-lib",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "main": "./dist/wc-simple-components-lib.es.js",
   "exports": {
     ".": "./dist/wc-simple-components-lib.es.js"

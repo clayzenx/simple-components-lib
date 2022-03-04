@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + Lit App</title>
 
-  <script type="module" src="/dist/wc-simple-components-lib.es.js"></script>
+  <script type="module" src="/src/index.ts"></script>
 
   <style>
     body {
@@ -22,6 +22,8 @@
 </head>
 
 <body>
+  <s-repo-card slug="clayzenx/simple-components-lib"></s-repo-card>
+
   <s-nav direction="row">
     <s-button slot="nav-item" id="/home" type="link" class="tab" active>Home</s-button>
     <s-button slot="nav-item" id="/catalog" type="link" class="tab">Catalog</s-button>
